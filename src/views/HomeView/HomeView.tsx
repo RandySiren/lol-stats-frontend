@@ -1,10 +1,12 @@
 import MatchResult from "../../components/MatchResults";
 import ViewContainer from "../../components/ViewContainer";
+import { useGetRecentMatchDetailsQuery } from "../../lib/api/summonerApi";
 
 const HomeView = () => {
+  const { data } = useGetRecentMatchDetailsQuery("Sirennn");
   return (
     <ViewContainer className="p-4">
-      <div className="flex flex-col items-center justify-center h-full">
+      <div className="flex flex-col items-center pt-12">
         <h1 className="h-24 text-3xl font-semibold">
           League of Legends Stats App
         </h1>
