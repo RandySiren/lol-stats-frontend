@@ -3,7 +3,10 @@ import ViewContainer from "../../components/ViewContainer";
 import { useGetRecentMatchDetailsQuery } from "../../lib/api/summonerApi";
 
 const HomeView = () => {
-  const { data } = useGetRecentMatchDetailsQuery("Sirennn");
+  const { data } = useGetRecentMatchDetailsQuery({
+    summonerName: "Sirennn",
+    count: 5,
+  });
   return (
     <ViewContainer className="p-4">
       <div className="flex flex-col items-center pt-12">
